@@ -1,0 +1,117 @@
+<!-- insert head.ejs -->
+<%- include('../partials/head') %>
+
+<!-- insert nav.ejs -->
+<%- include('../partials/nav') %>
+
+<!-- <body> -->
+    <div class="middle">
+        <div class="section">
+            <h1>CODESQUAD COMICS</h1>
+            <p>CodeSquad Comics is a collection of graphic novels read by Hannah Lin. The site is intended to display comic book covers along with information about each book, including the author, a rating, and other details about the graphic novel. Browse through the complete collection below. Click on the cover image or the Details link to see even more information about each graphic novel including the publisher, genre, number of pages, and a brief synopsis. The About page includes meta-information about this collection. Login is only available to the site administrator at this time.</p>
+        </div>
+
+        <div class="section">
+            <h2><i class="fa-duotone fa-rectangle-vertical-history"></i> COMPLETE COLLECTION</h2>
+            <div class="collectionDisplay">
+                
+                <!-- homework 12 - loop the comic books -->
+                <% for (comics of comics) { %>
+                    <a href="/data/data.js/<%= comics._id %>" class="box"></a>
+                    <div class="content">
+                        <div class="Displays">
+                            <img src="/images/<%= comics.image %>" alt="">
+                            <div class="title"><%= comics.title %></div>
+                            <div class="author"><%= comics.author %></div>
+                            <div class="rating"><%= comics.rating %></div>
+                            <a href="/" class="details">Details</a>
+                        </div>
+                    </div>    
+                <% } %>
+                
+                <!-- <div class="Displays">
+                    <img src="/public/images/fun-home.jpg" alt="fun-home">
+                    <div class="title">Fun Home: A Family Tragicomic</div>
+                    <div class="author">by Alison Bachdels</div>
+                    <div class="rating">5 stars</div>
+                    <a class="details">Details</a>
+                </div> -->
+                <!-- <div class="Displays"><img src="/public/images/watchmen.jpg" alt="watchmen">
+                    <div class="title">watchmen</div>
+                    <div class="author">by Alan Moore</div>
+                    <div class="rating">5 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/hunter-x-hunter.jpg" alt="watchmen">
+                    <div class="title">Hunter X Hunter Vol.1</div>
+                    <div class="author">by Yoshihiro Togashi</div>
+                    <div class="rating">5 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/lumberjanes.jpg" alt="lumberjanes">
+                    <div class="title">Lumberjanes Vol.1</div>
+                    <div class="author">by Noelle Stevenson</div>
+                    <div class="rating">4 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/one-piece.jpg" alt="one-piece">
+                    <div class="title">One Piece, Vol.1: Roman Dawn</div>
+                    <div class="author">by Eiichiro Oda</div>
+                    <div class="rating">5 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/wake.jpg" alt="wake">
+                    <div class="title">Wake: The Hidden History of Women-Led Salve Revolts</div>
+                    <div class="author">by Rebecca Hall</div>
+                    <div class="rating">4 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/black-panther.jpg" alt="black-panther">
+                    <div class="title">Black Panther: A Nation Under Our Feet Book 1</div>
+                    <div class="author">by Ta-Nehisi Coates</div>
+                    <div class="rating">3 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/the-walking-dead.jpg"
+                        alt="the-walking-dead">
+                    <div class="title">The Walking Dead, Vol.1: Days Gone Bye</div>
+                    <div class="author">by Robert Kirkman</div>
+                    <div class="rating">4 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/march.jpg" alt="march">
+                    <div class=" title">March: Book One</div>
+                    <div class="author">by John Lewis</div>
+                    <div class="rating">5 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><a href="/public/images/batman.jpg">
+                        <img src="../CP_Homework/public/images/batman.jpg" alt="batman"></a>
+                    <div class="title">Batman: The Dark Knight Returns</div>
+                    <div class="author">by Frank Miller</div>
+                    <div class="rating">3 stars</div>
+                    <a class="details" href="../pages/book.ejs">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/queer.jpg" alt="queer">
+                    <div class="title">Queer: A Graphic History</div>
+                    <div class="author">by Meg-John Barker</div>
+                    <div class="rating">4 stars</div>
+                    <a class="details">Details</a>
+                </div>
+                <div class="Displays"><img src="/public/images/parable-of-the-sower.jpg"
+                        alt="parable-of-the-sower">
+                    <div class="title">Parable of the Sower</div>
+                    <div class="author">by Octavia E. Butler</div>
+                    <div class="rating">4 stars</div>
+                    <a class="details">Details</a>
+                </div> -->
+        </div>
+        <button class="displaymore">DISPLAY MORE</button>
+    </div>
+</div>
+<!-- </body> -->
+
+<!-- </html> -->
+
+<!-- insert footer.ejs -->
+<%- include('../partials/footer') %>

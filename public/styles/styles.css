@@ -1,0 +1,372 @@
+:root {
+    --bg-blue: #006B6B;
+    --border-blue: #063C5E;
+    --white: white;
+    --yellow: #FCCF14;
+    --lightgrey: lightgrey;
+    --black: black;
+    --hoverblue: blue;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    /* The font-size is 1.4 times the font-size of the root element. */
+    font-size: 1.4rem;
+    background-image: linear-gradient(var(--white), var(--bg-blue));
+    box-sizing: border-box;
+    font-family: "open sans";
+}
+
+/* apply google fonts Fredericka the Great to Headers/Navbar/Footer */
+.navbar, footer, h1 {
+    font-family: 'Fredericka the Great';
+}
+
+.section {
+    border: 5px solid var(--border-blue);
+    background-color: var(--white);
+    margin: 10vw;
+    padding: 1vw;
+}
+
+.section h1 {
+    font-size: 2rem;
+}
+
+.section h1,
+h2 {
+    text-decoration: bold;
+    text-align: center;
+    color: var(--border-blue);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    /* padding-right: 30vw;
+    padding-left: 30vw; */
+    /* justify-content: center;
+    align-items: center;
+    align-content: center; */
+}
+
+.row {
+    padding: 10px;
+    text-align: right;
+    /* margin-right: 40%; */
+    /* margin-right: 25vw; */
+    width: 30vw;
+    margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+}
+
+.row input,
+.row select,
+.row textarea {
+    display: inline-block;
+    width: 55%;
+}
+
+.form button {
+    display: block;
+    margin: auto;
+}
+
+textarea[id="synopsis"] {
+    height: 150px;
+    vertical-align: top;
+}
+
+.login {
+    /* text-align: center; */
+    text-align: right;
+    /* margin-right: 40%; */
+    /* margin-right: 25vw; */
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* top nav bar */
+header {
+    background-color: var(--border-blue);
+    display: flex;
+    align-items: center;
+    padding: 0.5%;
+}
+
+a.logo {
+    flex:1;
+}
+
+ul.navbar-list {
+    margin-left: 30%;
+}
+
+ul.navbar-list li {
+    flex:2;
+    list-style:none;
+    display: inline-block;
+    padding: 0.8rem 1rem;
+}
+
+nav a:link,
+nav a:visited,
+footer a:link,
+footer a:link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--bg-blue);
+    font-weight: bold;
+    background-color: var(--yellow);
+}
+
+a:active {
+    color: var(--hoverblue);
+    font-weight: bold;
+    background-color: var(--yellow);
+}
+
+/* style hamburger menu for mobile */
+a.menu-icon {
+	display: block;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5rem 1rem;
+}
+
+.title {
+    font-style: italic;
+}
+
+.img1 {
+    width: 30vw;
+}
+
+span {
+    display: inline-block;
+}
+
+/* batman card */
+.card {
+    border: 0.5vw var(--yellow) solid;
+    width: 85%;
+    margin: 5vw auto;
+    border-radius: 2.5vw;
+}
+
+.text {
+    padding: 2vw;
+    background-color: var(--white);
+}
+
+.card h1 {
+    padding: 5% 10% 0% 10%;
+    font-size: 2vw;
+}
+
+.card img {
+    width: 80%;
+    border: 0.4vw var(--white) solid;
+    border-radius: 2vw;
+    margin: 0.5vw 1vw 3vw 1vw;
+}
+
+.card span {
+    color: var(--border-blue);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.titlecard {
+    color: var(--yellow);
+    font-weight: bold;
+    background-color: var(--border-blue);
+    text-align: center;
+    font-size: large;
+    border-radius: 2vw 2vw 0px 0px;
+    border-bottom: var(--yellow) solid;
+    margin-top: -2.7%;
+}
+
+.indicator {
+    color: var(--border-blue);
+}
+
+.img2 {
+    width:8rem;
+}
+
+.details {
+    color: var(--bg-blue);
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--yellow);
+    /* font-size: 1em; */
+}
+
+.admin {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* admin page style */
+.admin tr:nth-child(odd) {
+    background-color: var(--lightgrey);
+}
+
+.admin th,
+.admin td {
+    padding: 5px;
+    border: 0.5px solid var(--black);
+}
+
+.edit {
+    background-color: var(--border-blue);
+    color: var(--white);
+    width: 60px;
+}
+
+button[type="submit"] {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: auto;
+    display: flex;
+    margin-bottom: 40PX;
+}
+
+button[class="delete"] {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer style */
+.container {
+    background-color: var(--border-blue);
+    text-decoration: none;
+    color: var(--white);
+    border-top: 5px var(--yellow) solid;
+    padding-left: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container h3 {
+    color: var(--yellow);
+}
+
+.footer-block {
+    display: inline-block;
+    padding: 2rem;
+}
+
+.collectionDisplay {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button[class="displaymore"] {
+    display: flex;
+    margin: 0 auto;
+}
+
+.Displays {
+    flex: 1;
+    max-width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.Displays img {
+    width: 200px;
+    padding: 20px;
+}
+
+.CollectionDetails {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer icons */
+.fa-square-facebook,
+.fa-instagram,
+.fa-square-twitter {
+    font-size: larger;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* navigation: hamburger menu icon appears at screen sizes less than 768px. */
+@media screen and (min-width: 769px) {
+	header {
+		display: flex;
+	}
+
+	a.menu-icon {
+		display: none;
+	}
+
+	.ul.navbar-list {
+		display: flex;
+		justify-content: space-around;
+		font-size: 1.25rem;
+	}
+    
+    a.navlogo {
+        flex:1;
+    }
+
+	nav.navbar {
+		flex: 2;
+	} 
+}
+
+/* mobile/tablet, should not see text in navigation bar. */
+@media screen and (max-width: 768px) {
+    nav.navbar {
+        display: none;
+    }
+}
+
+/* footer blocks stack on top of each other in one column at screen size less than 768px */
+@media screen and (max-width:768px) {
+    .container {
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+/* Batman card:  displays content side by side at screen size of at least 1024px.  */
+@media screen and (min-width:1024px) {
+    .card {
+        display:flex;
+    }
+}
+
+/* Add horizontal scrollbar to `admin.html` table at mobile screen size */
+@media screen and (max-width:767px) {
+    .admin-table {
+        overflow-x: auto;
+    }
+}

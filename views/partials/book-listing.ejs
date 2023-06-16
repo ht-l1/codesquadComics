@@ -1,0 +1,33 @@
+<!-- added per Kit feedback.  you will need to make a partial for the admin landing page because each table row can be repeated as a partial. Name this new partial book-listing.ejs. -->
+
+<!-- book-listing.ejs -->
+
+<table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const comic of comics) { %>
+        <tr>
+          <td><%= comic.title %></td>
+          <td>
+            <a href="/admin-console/update/<%= comic._id %>">
+              <button class="edit">Edit</button>
+            </a>
+          </td>
+          <td>
+            <a href="/books/<%= comic._id %>">
+              <button class="delete">Delete</button>
+            </a>
+          </td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  
+  <button type="submit">Submit</button>
+  
